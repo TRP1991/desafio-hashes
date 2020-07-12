@@ -34,12 +34,8 @@ ventas = {
     Diciembre: 21000
 }
 
-match = '15000'
-ventas.each do |k,v|
-    if v == match
-        founded = true
-        puts k
-    end
-end
 
-puts 'no encontrado' unless founded
+search = ARGV[0]
+ARGV.each do |k,v|
+puts "#{}"
+end
