@@ -21,17 +21,7 @@ El hash utilizado para evaluar puede ser distinto y tener mas o menos meses.
 
 =end 
 
-def filter(hash)
-    filtered_hash = {}
-    hash.each do |k,v|
-        if v > 45000
-            filtered_hash[k] = v
-        end
-    end
-    filtered_hash #return
-end
-
-filter ({
+ventas = {
     Enero: 15000,
     Febrero: 22000,
     Marzo: 12000,
@@ -44,4 +34,17 @@ filter ({
     Octubre: 21500,
     Noviembre: 91000,
     Diciembre: 21000
-})
+}
+
+
+def filter(hash, valor)
+    filtered_hash = {}
+    hash.each do |k, v|
+      if v > valor
+        filtered_hash[k] = v
+      end
+    end
+  return filtered_hash #return
+  end
+  
+  filter(ventas, ARGV[0].to_i)

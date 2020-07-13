@@ -35,7 +35,7 @@ ventas = {
 }
 
 
-search = ARGV[0]
-ARGV.each do |k,v|
-puts "#{}"
-end
+ARGV.each do |search|
+    busqueda_mes = ventas.invert[search.to_i]
+    print busqueda_mes ? busqueda_mes : "no encontrado"
+  end
