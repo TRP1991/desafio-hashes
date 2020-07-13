@@ -19,6 +19,8 @@ Tips:
 
 =end    
 
+def busqueda(v1,,v2,v3)
+
 ventas = {
     Enero: 15000,
     Febrero: 22000,
@@ -35,7 +37,24 @@ ventas = {
 }
 
 
+
+
+
+
+
+
+
+
+
+=begin 
+
+ESte código no corresponde ya que estoy utilizando invert por ende cuando realizo pruebas con 
+Julio y Diciembre me lanza datos incorrectos (solo lanza Dic). Lo dejo como ejemplo y de memoria 
+en la utilización de invert. 
+
 ARGV.each do |search|
     search_month = ventas.invert[search.to_i]
     puts search_month ? search_month : "no encontrado"
   end
+
+=end 
