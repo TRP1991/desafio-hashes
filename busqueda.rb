@@ -36,6 +36,6 @@ ventas = {
 
 
 ARGV.each do |search|
-    busqueda_mes = ventas.invert[search.to_i]
-    print busqueda_mes ? busqueda_mes : "no encontrado"
+    search_month = ventas.invert[search.to_i]
+    puts search_month ? search_month : "no encontrado"
   end
