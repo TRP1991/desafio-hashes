@@ -19,7 +19,6 @@ Tips:
 
 =end    
 
-def busqueda(v1,v2,v3)
 
 ventas = {
     Enero: 15000,
@@ -36,11 +35,8 @@ ventas = {
     Diciembre: 21000
 }
 
-search=[v1,v2,v3]
-search.each do |x|
-    if k = ventas.rassoc(x)
-        print k[0]
-    else 
-        print 'no encontrado'
-    end
+
+ARGV.each do |search|
+    search_month = ventas.invert[search.to_i]
+    puts search_month ? search_month : "no encontrado"
 end

@@ -33,4 +33,4 @@ ventas = {
     Diciembre: 21000
 }
 
-ventas.each { |k, v| puts k if v >= 45000 }
+ventas.each do |k, v| print "#{k} " if v >= 45000 end
