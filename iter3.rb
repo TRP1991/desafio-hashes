@@ -47,4 +47,4 @@ def filter(hash, valor)
   return filtered_hash #return
   end
   
-  filter(ventas, ARGV[0].to_i)
+filter(ventas, ARGV[0].to_i)
