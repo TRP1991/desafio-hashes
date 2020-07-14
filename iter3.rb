@@ -37,14 +37,9 @@ ventas = {
 }
 
 
-def filter(hash, valor)
-    filtered_hash = {}
-    hash.each do |k, v|
-      if v > valor
-        filtered_hash[k] = v
-      end
-    end
-  return filtered_hash #return
-  end
-  
-filter(ventas, ARGV[0].to_i)
+def filter (hash)
+  n = ARGV[0].to_i
+  hash.select{|k, v| v > n}
+end
+
+pp filter (ventas)
